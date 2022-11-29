@@ -1,1 +1,47 @@
-<h1>Mancuoj</h1>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="css/index.css" />
+    <title>Mancuoj</title>
+</head>
+
+<body>
+    <section class="todoapp">
+        <header class="header">
+            <h1>todos</h1>
+            <input placeholder="What needs to be done?" autofocus class="new-todo" data-todo="new" />
+        </header>
+
+        <!-- 👇 默认隐藏，有 todo 时显示 -->
+        <section class="main" data-todo="main">
+            <input id="toggle-all" class="toggle-all" type="checkbox" data-todo="toggle-all" />
+            <label for="toggle-all">Mark all as complete</label>
+            <ul class="todo-list" data-todo="list"></ul>
+        </section>
+
+        <footer class="footer" data-todo="footer">
+            <!-- 👇 默认显示 0 items left -->
+            <span class="todo-count" data-todo="count"><strong>0</strong> items left</span>
+            <ul class="filters" data-todo="filters">
+                <li><a class="selected" href="#/">All</a></li>
+                <li><a href="#/active">Active</a></li>
+                <li><a href="#/completed">Completed</a></li>
+            </ul>
+            <!-- 👇 没有未完成元素时隐藏 -->
+            <button class="clear-completed" data-todo="clear-completed">
+                Clear completed
+            </button>
+        </footer>
+    </section>
+    
+    <footer class="info">
+        <p>Double-click to edit a todo</p>
+    </footer>
+
+    <script type="module" src="js/app.js"></script>
+</body>
+
+</html>
